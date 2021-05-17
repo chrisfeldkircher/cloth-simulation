@@ -122,6 +122,7 @@ class Simulation:
         self.screen.fill((255,255,255))
         self.clock = pygame.time.Clock()
         self.color_generator()
+        self.wind = True;
 
     def apply_force(self):
         pointIndex = 0
@@ -235,7 +236,7 @@ class Simulation:
         self.screen.fill((255,255,255))
         i = -1
         for point in self.points:
-            pygame.draw.circle(self.screen, (100,0,0), (point.pos[1], point.pos[0]), 1)
+            #pygame.draw.circle(self.screen, (100,0,0), (point.pos[1], point.pos[0]), 1)
             for spring in point.springs:
                 i %= 5
                 p1 = spring.point1
